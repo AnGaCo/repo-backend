@@ -33,6 +33,9 @@ public class PerfilController {
             nva.setProfesion(pers.getProfesion());
             nva.setResumen(pers.getResumen());
             nva.setFoto(pers.getFoto());
+            nva.setEmail(pers.getEmail());
+            nva.setDomicilio(pers.getDomicilio());
+            nva.setTelefono(pers.getTelefono());
             
             perfilServ.editarPerfil(nva);
         }
