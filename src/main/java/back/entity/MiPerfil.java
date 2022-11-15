@@ -1,6 +1,8 @@
 
 package back.entity;
 
+//import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.util.List;
 import javax.persistence.*;
 
@@ -20,17 +22,21 @@ public class MiPerfil {
     private String domicilio;
     private String telefono;
     
-    @OneToMany(mappedBy="perfil",cascade= {CascadeType.ALL})
-    private List<Estudio> estudios;
-    
-    @OneToMany(mappedBy="perfil",cascade=CascadeType.ALL)
-    private List<Experiencia> experiencias;
-    
-    @OneToMany(mappedBy="perfil",cascade={CascadeType.ALL})
-    private List<Proyecto> proyectos;
-    
-    @OneToMany(mappedBy="perfil", cascade={CascadeType.ALL})
-    private List<Tecnologia> tecnologias;
+//    @OneToMany(mappedBy="perfil",cascade= {CascadeType.ALL})
+//    @JsonIgnore
+//    private List<Estudio> estudios;
+//    
+//    @OneToMany(mappedBy="perfil",cascade=CascadeType.ALL)
+//    @JsonIgnore
+//    private List<Experiencia> experiencias;
+//    
+//    @OneToMany(mappedBy="perfil",cascade={CascadeType.ALL})
+//    @JsonIgnore
+//    private List<Proyecto> proyectos;
+//    
+//    @OneToMany(mappedBy="perfil", cascade={CascadeType.ALL})
+//    @JsonIgnore
+//    private List<Tecnologia> tecnologias;
     
     public MiPerfil(){
         super();
@@ -120,36 +126,36 @@ public class MiPerfil {
         this.telefono = telefono;
     }
 
-    public List<Estudio> getEstudios() {
-        return estudios;
-    }
-
-    public void setEstudios(List<Estudio> estudios) {
-        this.estudios = estudios;
-    }
-
-    public List<Experiencia> getExperiencias() {
-        return experiencias;
-    }
-
-    public void setExperiencias(List<Experiencia> experiencias) {
-        this.experiencias = experiencias;
-    }
-
-    public List<Proyecto> getProyectos() {
-        return proyectos;
-    }
-
-    public void setProyectos(List<Proyecto> proyectos) {
-        this.proyectos = proyectos;
-    }
-
-    public List<Tecnologia> getTecnologias() {
-        return tecnologias;
-    }
-
-    public void setTecnologias(List<Tecnologia> tecnologias) {
-        this.tecnologias = tecnologias;
-    }
+//    public List<Estudio> getEstudios() {
+//        return estudios;
+//    }
+//
+//    public void setEstudios(List<Estudio> estudios) {
+//        this.estudios = estudios;
+//    }
+//
+//    public List<Experiencia> getExperiencias() {
+//        return experiencias;
+//    }
+//
+//    public void setExperiencias(List<Experiencia> experiencias) {
+//        this.experiencias = experiencias;
+//    }
+//
+//    public List<Proyecto> getProyectos() {
+//        return proyectos;
+//    }
+//
+//    public void setProyectos(List<Proyecto> proyectos) {
+//        this.proyectos = proyectos;
+//    }
+//
+//    public List<Tecnologia> getTecnologias() {
+//        return tecnologias;
+//    }
+//
+//    public void setTecnologias(List<Tecnologia> tecnologias) {
+//        this.tecnologias = tecnologias;
+//    }
     
 }

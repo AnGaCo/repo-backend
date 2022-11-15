@@ -1,7 +1,7 @@
 
 package back.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+//import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import javax.persistence.*;
@@ -19,16 +19,16 @@ public class Experiencia {
     private LocalDate inicio;
     private LocalDate fin;
     private String descripcion;
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="idPerfil")
-    @JsonBackReference
-    private MiPerfil perfil;
+//    @ManyToOne(fetch=FetchType.LAZY)
+//    @JoinColumn(name="idPerfil")
+//    @JsonBackReference
+//    private MiPerfil perfil;
     
     public Experiencia(){
         
     }
 
-    public Experiencia(int idExp, String puesto, String lugar, String logo_empresa, String inicio, String fin, String descripcion, MiPerfil persona) {
+    public Experiencia(int idExp, String puesto, String lugar, String logo_empresa, String inicio, String fin, String descripcion) {
         this.idExp = idExp;
         this.puesto = puesto;
         this.lugar = lugar;
@@ -41,7 +41,7 @@ public class Experiencia {
         this.inicio = fechaInicio;
         this.fin = fechaFin;
         this.descripcion = descripcion;
-        this.perfil = persona;
+//        this.perfil = persona;
     }
 
     public int getIdExp() {
@@ -100,12 +100,12 @@ public class Experiencia {
         this.descripcion = descripcion;
     }
 
-    public MiPerfil getPerfil() {
-        return perfil;
-    }
-
-    public void setPerfil(MiPerfil perfil) {
-        this.perfil = perfil;
-    }
+//    public MiPerfil getPerfil() {
+//        return perfil;
+//    }
+//
+//    public void setPerfil(MiPerfil perfil) {
+//        this.perfil = perfil;
+//    }
     
 }

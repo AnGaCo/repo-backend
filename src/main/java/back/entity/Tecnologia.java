@@ -1,7 +1,7 @@
 
 package back.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+//import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
 
@@ -13,20 +13,20 @@ public class Tecnologia {
     @Basic
     private String nombre;
     private int nivel;
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="idPerfil")
-    @JsonBackReference
-    private MiPerfil perfil;
+//    @ManyToOne(fetch=FetchType.LAZY)
+//    @JoinColumn(name="idPerfil")
+//    @JsonBackReference
+//    private MiPerfil perfil;
     
     public Tecnologia(){
         
     }
 
-    public Tecnologia(int idTec, String nombre, int nivel, MiPerfil persona) {
+    public Tecnologia(int idTec, String nombre, int nivel) {
         this.idTec = idTec;
         this.nombre = nombre;
         this.nivel = nivel;
-        this.perfil = persona;
+//        this.perfil = persona;
     }
 
     public int getIdTec() {
@@ -53,12 +53,12 @@ public class Tecnologia {
         this.nivel = nivel;
     }
 
-    public MiPerfil getPerfil() {
-        return perfil;
-    }
-
-    public void setPerfil(MiPerfil perfil) {
-        this.perfil = perfil;
-    }
+//    public MiPerfil getPerfil() {
+//        return perfil;
+//    }
+//
+//    public void setPerfil(MiPerfil perfil) {
+//        this.perfil = perfil;
+//    }
     
 }
