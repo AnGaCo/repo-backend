@@ -29,7 +29,6 @@ public class TecnologiaController {
         Tecnologia nva = tecnoServ.buscarTecnologia(id);
         if(nva != null){
             nva.setNombre(tec.getNombre());
-            nva.setNivel(tec.getNivel());
             
             tecnoServ.editarTecnologia(nva);
         }

@@ -36,6 +36,10 @@ public class PerfilController {
             nva.setEmail(pers.getEmail());
             nva.setDomicilio(pers.getDomicilio());
             nva.setTelefono(pers.getTelefono());
+            nva.setLinkedin(pers.getLinkedin());
+            nva.setGithub(pers.getGithub());
+            nva.setTwitter(pers.getTwitter());
+            nva.setFacebook(pers.getFacebook());
             
             perfilServ.editarPerfil(nva);
         }

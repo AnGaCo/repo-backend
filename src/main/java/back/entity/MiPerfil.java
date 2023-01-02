@@ -1,8 +1,6 @@
 
 package back.entity;
 
-//import com.fasterxml.jackson.annotation.JsonIgnore;
-//import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.util.List;
 import javax.persistence.*;
 
@@ -21,28 +19,17 @@ public class MiPerfil {
     private String email;
     private String domicilio;
     private String telefono;
+    private String linkedin;
+    private String github;
+    private String twitter;
+    private String facebook;
     
-//    @OneToMany(mappedBy="perfil",cascade= {CascadeType.ALL})
-//    @JsonIgnore
-//    private List<Estudio> estudios;
-//    
-//    @OneToMany(mappedBy="perfil",cascade=CascadeType.ALL)
-//    @JsonIgnore
-//    private List<Experiencia> experiencias;
-//    
-//    @OneToMany(mappedBy="perfil",cascade={CascadeType.ALL})
-//    @JsonIgnore
-//    private List<Proyecto> proyectos;
-//    
-//    @OneToMany(mappedBy="perfil", cascade={CascadeType.ALL})
-//    @JsonIgnore
-//    private List<Tecnologia> tecnologias;
     
     public MiPerfil(){
         super();
     }
 
-    public MiPerfil(int idPerfil, String nombre, String apellido, String profesion, String resumen, String foto, String email, String domicilio, String telefono) {
+    public MiPerfil(int idPerfil, String nombre, String apellido, String profesion, String resumen, String foto, String email, String domicilio, String telefono, String linkedin, String github, String twitter, String facebook) {
         this.idPerfil = idPerfil;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -52,8 +39,12 @@ public class MiPerfil {
         this.email = email;
         this.domicilio = domicilio;
         this.telefono = telefono;
+        this.linkedin = linkedin;
+        this.github = github;
+        this.twitter = twitter;
+        this.facebook = facebook;
     }
-
+    
     public int getIdPerfil() {
         return idPerfil;
     }
@@ -126,36 +117,36 @@ public class MiPerfil {
         this.telefono = telefono;
     }
 
-//    public List<Estudio> getEstudios() {
-//        return estudios;
-//    }
-//
-//    public void setEstudios(List<Estudio> estudios) {
-//        this.estudios = estudios;
-//    }
-//
-//    public List<Experiencia> getExperiencias() {
-//        return experiencias;
-//    }
-//
-//    public void setExperiencias(List<Experiencia> experiencias) {
-//        this.experiencias = experiencias;
-//    }
-//
-//    public List<Proyecto> getProyectos() {
-//        return proyectos;
-//    }
-//
-//    public void setProyectos(List<Proyecto> proyectos) {
-//        this.proyectos = proyectos;
-//    }
-//
-//    public List<Tecnologia> getTecnologias() {
-//        return tecnologias;
-//    }
-//
-//    public void setTecnologias(List<Tecnologia> tecnologias) {
-//        this.tecnologias = tecnologias;
-//    }
-    
+    public String getLinkedin() {
+        return linkedin;
+    }
+
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
+    }
+
+    public String getGithub() {
+        return github;
+    }
+
+    public void setGithub(String github) {
+        this.github = github;
+    }
+
+    public String getTwitter() {
+        return twitter;
+    }
+
+    public void setTwitter(String twitter) {
+        this.twitter = twitter;
+    }
+
+    public String getFacebook() {
+        return facebook;
+    }
+
+    public void setFacebook(String facebook) {
+        this.facebook = facebook;
+    }
+
 }

@@ -1,7 +1,6 @@
 
 package back.entity;
 
-//import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import javax.persistence.*;
@@ -19,10 +18,6 @@ public class Experiencia {
     private LocalDate inicio;
     private LocalDate fin;
     private String descripcion;
-//    @ManyToOne(fetch=FetchType.LAZY)
-//    @JoinColumn(name="idPerfil")
-//    @JsonBackReference
-//    private MiPerfil perfil;
     
     public Experiencia(){
         
@@ -41,7 +36,6 @@ public class Experiencia {
         this.inicio = fechaInicio;
         this.fin = fechaFin;
         this.descripcion = descripcion;
-//        this.perfil = persona;
     }
 
     public int getIdExp() {
@@ -100,12 +94,4 @@ public class Experiencia {
         this.descripcion = descripcion;
     }
 
-//    public MiPerfil getPerfil() {
-//        return perfil;
-//    }
-//
-//    public void setPerfil(MiPerfil perfil) {
-//        this.perfil = perfil;
-//    }
-    
 }
